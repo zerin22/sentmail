@@ -21,9 +21,13 @@ Route::get('/', function () {
 });
 
 
-// Route::get('/sendmail', MailController::class, 'SendMail');
-
-Route::get('/sendmail', function(){
-
-    Mail::to("hello@email.com")->send(new TestEmail());
+Route::controller(MailController::class)->group(function(){
+    Route::get('/email', 'Email')->name('email');
+    Route::get('/send-email', 'sendEmail')->name('send-email');
 });
+
+
+// Route::get('/sendmail', function(){
+
+//     Mail::to("hello@email.com")->send(new TestEmail());
+// });
