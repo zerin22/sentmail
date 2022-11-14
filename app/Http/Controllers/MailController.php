@@ -10,13 +10,13 @@ class MailController extends Controller
 {
     public function SendMail()
     {
-        $mailData = [
-            "name" => "Test Mail",
-            "dob" => "12/2/1971"
-        ];
-        Mail::to("hello@email.com")->send(new TestEmail($mailData));
-        dd("Mail Send Successfully");
+        // $mailData = [
+        //     "name" => "Test Mail",
+        //     "dob" => "12/2/1971"
+        // ];
+        
+        // dd("Mail Send Successfully");
 
-        // return view('email.index');
+        // // return view('email.index');
     }
 }

@@ -18,9 +18,9 @@ class TestEmail extends Mailable
      *
      * @return void
      */
-    public function __construct($mailData)
+    public function __construct()
     {
-        $this->mailData = $mailData;
+        
     }
 
     /**
@@ -44,7 +44,7 @@ class TestEmail extends Mailable
     {
         return new Content(
             // view: 'view.name',
-            view: 'mail.index',
+            view: 'email.index',
 
         );
     }
